@@ -2,48 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- La etiqueta meta, a continuación es lo minimo para garantizar que 
-     la pagina web se muestre correctamente en diferentes dispositivos, es decir,
-     para que sea responsive design, que responsive no quiere decir responsable, sino
-     que se adapta a diferentes tamaños de pantalla -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro al HTML</title>
     <style>
-        /*
-            Selectores basicos de CSS
-        */
 
-        /* Por el nombre del elemento */
-
-        p {
-            color: yellow;
+        /* Cuando el link (enlace) no ha sido visitado todavia */
+        a:link {
+            color: red;
         }
 
-        /* Seleccionar el mismo parrafo pero por el id */
-
-        #parrafo1 {
-            background-color: blue;
+        /* Cuando el link ha sido visitado */
+        a:visited {
+            color: green;
         }
 
-        /* Selector por la clase del elemento, es decir, seleccionar 
-        los elementos que tienen el mismo atributo class */
-
-        .info {
-            border: 3px dashed black;
-            background-color: brown;
+        /* Cuando el raton esta encima del link, sin hacer click en el mismo */
+        a:hover {
+            color: hotpink;
         }
 
+        /* Cuando el link ha sido seleccionado, cuando esta activo, es decir
+        cuando hacemos click y mantenemos el click presionado sobre el link */
+        a:active {
+            color: blue;
+        }
     </style>
-    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <!-- Introduccion al CSS. Primero enteder de donde sale el termino cascada  -->
+    <!-- Las PSeudoclases: Son selectores que se aplican en dependencia del 
+     estado del elemento -->
 
-    <p id="parrafo1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dignissimos recusandae ipsa minus rem? Iusto dicta eveniet eius quos praesentium facere, veritatis consequuntur adipisci saepe alias? Accusamus sit quis soluta?</p>
+    <h1>Aplicar estilo a un enlace en dependencia del estado del mismo</h1>
+    
+    <p><a href="https://www.vodafone.es/c/particulares/es/" target="_blank">Vodafone</a></p>
 
-    <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, necessitatibus veniam magnam illo quibusdam facilis accusamus asperiores ex minima dolorum provident ad porro iusto sunt dolore repellat ipsum eum ducimus.</p>
-    <p class="info">Molestias optio sed, vel vero eum, inventore nulla quasi enim voluptatibus corporis dolorem alias quos numquam perferendis dolore deleniti, debitis quas. Fugit aspernatur reiciendis perspiciatis consequuntur exercitationem ea similique provident.</p>
-    <p class="info">Eius deserunt adipisci quibusdam ratione nam earum, voluptatibus quidem vero fugiat, tempora quis molestias distinctio voluptate at quaerat labore est! Odio, voluptate consectetur? Temporibus nulla eveniet praesentium alias, odit aperiam!</p>
+    <p><strong>Nota: </strong>a:hover tiene que ir despues de a:link y a:visited en las reglas de estilo para que sean efectivas. Y ademas,
+    la pseudoclase a:active tiene que ir despues de a:hover.</p>
 
 </body>
 </html>
