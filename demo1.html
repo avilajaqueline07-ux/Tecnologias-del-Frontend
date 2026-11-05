@@ -8,8 +8,42 @@
      que se adapta a diferentes tamaños de pantalla -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro al HTML</title>
+    <style>
+        /*
+            Selectores basicos de CSS
+        */
+
+        /* Por el nombre del elemento */
+
+        p {
+            color: yellow;
+        }
+
+        /* Seleccionar el mismo parrafo pero por el id */
+
+        #parrafo1 {
+            background-color: blue;
+        }
+
+        /* Selector por la clase del elemento, es decir, seleccionar 
+        los elementos que tienen el mismo atributo class */
+
+        .info {
+            border: 3px dashed black;
+            background-color: brown;
+        }
+
+    </style>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    
+    <!-- Introduccion al CSS. Primero enteder de donde sale el termino cascada  -->
+
+    <p id="parrafo1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dignissimos recusandae ipsa minus rem? Iusto dicta eveniet eius quos praesentium facere, veritatis consequuntur adipisci saepe alias? Accusamus sit quis soluta?</p>
+
+    <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, necessitatibus veniam magnam illo quibusdam facilis accusamus asperiores ex minima dolorum provident ad porro iusto sunt dolore repellat ipsum eum ducimus.</p>
+    <p class="info">Molestias optio sed, vel vero eum, inventore nulla quasi enim voluptatibus corporis dolorem alias quos numquam perferendis dolore deleniti, debitis quas. Fugit aspernatur reiciendis perspiciatis consequuntur exercitationem ea similique provident.</p>
+    <p class="info">Eius deserunt adipisci quibusdam ratione nam earum, voluptatibus quidem vero fugiat, tempora quis molestias distinctio voluptate at quaerat labore est! Odio, voluptate consectetur? Temporibus nulla eveniet praesentium alias, odit aperiam!</p>
+
 </body>
 </html>
