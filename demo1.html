@@ -9,10 +9,38 @@ para que sea responsive design, que responsive no quiere decir responsable, sino
 que se adapta a diferentes tamaños de pantalla -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro al HTML</title>
+    <style>
+        /* Selectores basicos de CSS*/
+
+        /*Por el nombre del elemento*/
+        p {
+            color: yellow;
+        }
+
+        /*seleccionar el mismo parrafo pero por id */
+        #parrafo1 {
+
+            background-color: blue;
+        }
+
+        /* Selector por la clase del elemento, es decir, seleccionar 
+        los elementos que tienen el mismo atributo class */
+
+        .info{
+            border: 3px dashed black;
+            background-color: brown;
+        }
+    </style>
+    <link rel="stylesheet" href="css/estillos.css">
 </head>
 
 <body>
+<!-- Introduccion al CSS. Primero enteder de donde sale el termino cascada -->
 
+<p id="parrafo1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eaque perspiciatis rerum magnam eius dolorem voluptatibus saepe culpa repudiandae quis doloribus maiores fuga ipsum cupiditate ipsam odit, enim corrupti sapiente?</p>
+<p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae cupiditate aperiam rerum sequi vero sapiente fugit deserunt blanditiis expedita non quae consectetur, impedit, nisi unde. Aliquid error repellat labore. Consequatur.</p>
+<p class="info">Suscipit, magnam nostrum sequi molestiae maiores tempora nemo facere et unde itaque error dignissimos tenetur saepe ipsam quibusdam placeat fugiat! Nostrum recusandae sapiente excepturi quidem nemo ullam qui maiores itaque.</p>
+<p class="info">Nobis sint eligendi libero architecto animi dolorem quis dolor nisi, ea deserunt facere maiores quas porro, harum, quia tempore magni cupiditate blanditiis neque itaque. Molestiae est ea ipsum maiores aperiam.</p>
 
 </body>
 
