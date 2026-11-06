@@ -26,6 +26,13 @@
         a:active {
             color: blue;
         }
+
+        /* PSeudo Elementos: */
+        #p3::first-line, #p4::first-line, #p5::first-line {
+            color: red;
+            font-variant: small-caps;
+            font-size: 19px;
+        }
     </style>
 </head>
 <body>
@@ -38,6 +45,19 @@
 
     <p><strong>Nota: </strong>a:hover tiene que ir despues de a:link y a:visited en las reglas de estilo para que sean efectivas. Y ademas,
     la pseudoclase a:active tiene que ir despues de a:hover.</p>
+    
+    <!-- Los PSeudo Elementos: Un pseudo elemento es una palabra resevada,
+     que se le aplica a un elemento para darle estilo a una parte de dicho 
+     elemento, y se diferencia de la pseudo clase, que esta separado del 
+     elemento por dobles dos puntos (::), en lugar de dos puntos (:) solamente
+     como es el caso de las pseudo clases -->
+
+    <!-- A modo de ejemplo: Vamos a aplicar un estilo CSS a las primeras lineas de los parrafos que se muestran a continuacion -->
+
+    <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, repudiandae minus esse ipsam voluptatem fuga deleniti repellat, ducimus molestias unde molestiae, modi doloremque! Omnis quibusdam quae, magnam ipsum explicabo deserunt!</p>
+    <p id="p4">Fugit reprehenderit ratione rem at culpa deleniti in, laborum reiciendis ullam tenetur id facere nihil quaerat nesciunt, quos, eaque explicabo dignissimos. Magni quae sunt voluptas autem, soluta fugiat nisi consectetur!</p>
+    <p id="p5">Rem adipisci ullam reprehenderit velit enim natus labore neque repellat laudantium provident, dolores illo quasi harum odio saepe tenetur a totam, alias temporibus iusto voluptatum! Rerum molestias nesciunt ipsum porro.</p>
+
 
 </body>
 </html>
