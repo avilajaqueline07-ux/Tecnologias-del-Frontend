@@ -35,14 +35,25 @@
 
         /*Pseudo Elementos: */
 
-        #p3::first-line,#p4::first-line,#p5::first-line {
+        .info::first-line {
             color: red;
             font-variant:small-caps ;
             font-size:19px ;
         }
 
-    </style>
 
+    /* Como ejercicio: Seleccionar la primera letra de los parrafos    
+    de la clase info y aumentarle el tamaño de la letra al 200% */
+
+    .info::first-letter {
+        color: blueviolet;
+        font-size: 200%;
+        font-weight: bold;
+    }
+
+
+    </style>
+  
 
 </head>
 
@@ -64,9 +75,9 @@ como es el caso de las pseudo clases -->
 <!-- a modo de ejemplo: Vamos a aplicar un estilo CSS a las primeras lines de los parrafos que se 
  muestran a continuacion  -->
 
- <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam odit ipsa quam voluptatem! Repellendus veritatis debitis fugit ex officiis! Porro neque ut commodi, facere labore nam voluptatibus impedit nobis? Magnam.</p>
- <p id="p4">Esse quos, inventore ipsum consequuntur culpa harum iure tempore? Debitis dolore repudiandae eos nobis, ut voluptatem maiores laudantium, facere, quidem possimus dicta accusantium ex porro facilis odit repellat illo voluptates?</p>
- <p id="p5">Sed accusantium voluptatum hic rem corporis nesciunt praesentium, itaque qui autem nostrum mollitia ipsum omnis perferendis magni ut natus cupiditate, placeat, eaque ipsa laudantium. Fuga perferendis similique possimus. Reprehenderit, beatae.</p>
+ <p id="p3" class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam odit ipsa quam voluptatem! Repellendus veritatis debitis fugit ex officiis! Porro neque ut commodi, facere labore nam voluptatibus impedit nobis? Magnam.</p>
+ <p id="p4" class="info">Esse quos, inventore ipsum consequuntur culpa harum iure tempore? Debitis dolore repudiandae eos nobis, ut voluptatem maiores laudantium, facere, quidem possimus dicta accusantium ex porro facilis odit repellat illo voluptates?</p>
+ <p id="p5" class="info">Sed accusantium voluptatum hic rem corporis nesciunt praesentium, itaque qui autem nostrum mollitia ipsum omnis perferendis magni ut natus cupiditate, placeat, eaque ipsa laudantium. Fuga perferendis similique possimus. Reprehenderit, beatae.</p>
 
 
 </body>
