@@ -5,66 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro al HTML</title>
     <style>
+        /* Seleccionar todos los elementos HTML que tengan un id */
+        [id] {
+            color: yellow;
+            background-color: blue ;
+        }
 
-        /* Cuando el link (enlace) no ha sido visitado todavia */
-        a:link {
+        /* Seleccionar el elemento cuyo id sea igual a parrafo-3 */
+        [id=parrafo-3]::first-letter {
+            font-size: 250%;
             color: red;
         }
 
-        /* Cuando el link ha sido visitado */
-        a:visited {
-            color: green;
+        /* Seleccionar los elementos que tengan atributo placeholder */
+        [placeholder] {
+            background-color: aquamarine;
         }
 
-        /* Cuando el raton esta encima del link, sin hacer click en el mismo */
-        a:hover {
-            color: hotpink;
+        /* Seleccionar los elementos donde el valor del atributo placeholder
+        termine en la palabra mismo */
+        [placeholder$=mismo] {
+            background-color: chocolate;
         }
 
-        /* Cuando el link ha sido seleccionado, cuando esta activo, es decir
-        cuando hacemos click y mantenemos el click presionado sobre el link */
-        a:active {
-            color: blue;
+        /* Seleccionar los elementos donde el valor del atributo placeholder
+        comience por la letra S */
+        [placeholder^=S] {
+            border: 4px dashed black;
         }
 
-        /* PSeudo Elementos: */
-        .info::first-line {
-            color: red;
-            font-variant: small-caps;
-            font-size: 19px;
+        /* Seleccionar los elementos donde el valor del atributo placeholder
+        contiene la palabra aqui, en cualquier parte */
+        [placeholder~=aqui] {
+            font-style: italic;
         }
 
-        /* Como ejercicio: Seleccionar la primera letra de los parrafos
-        de la clase info y aumentarle el tamaño de la letra al 200% */
-        .info::first-letter {
-            font-size: 200%;
-            color: black;
-            font-weight: bold;
+        /* Seleccionar los elementos que tangan el atributo checked */
+        :checked {
+            accent-color: red;
         }
+    
     </style>
 </head>
 <body>
-    <!-- Las PSeudoclases: Son selectores que se aplican en dependencia del 
-     estado del elemento -->
+ 
+    <p id="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit assumenda placeat voluptas possimus aliquid? Omnis ad eligendi doloribus nemo culpa, atque eius possimus libero id voluptates! Ex repellendus iure porro?</p>
+    <p id="p2">Maxime officia possimus eligendi accusamus a sapiente, soluta minus repellat nobis, doloribus eum, laborum veritatis. Exercitationem accusamus voluptatem aperiam reprehenderit, aliquam similique ratione dolore, explicabo magnam possimus voluptatum blanditiis voluptates?</p>
+    <p id="parrafo-3">Inventore excepturi quae odio facilis corporis labore, voluptatem quaerat eos quis obcaecati non. Soluta fugiat eaque obcaecati nihil voluptas similique, aperiam nulla? Ducimus doloribus eveniet laborum magni eos aliquid officia.</p>
 
-    <h1>Aplicar estilo a un enlace en dependencia del estado del mismo</h1>
-    
-    <p><a href="https://www.vodafone.es/c/particulares/es/" target="_blank">Vodafone</a></p>
+    <form action="#">
+        <input type="text" placeholder="Su nombre aqui">
+        <input type="text" placeholder="Apellidos, aqui mismo">
+        
+        <label for="hombre">Hombre: </label>
+        <input type="radio" name="genero" id="hombre">
+        <label for="mujer">Mujer: </label>
+        <input type="radio" name="genero" id="mujer">
+    </form>
 
-    <p><strong>Nota: </strong>a:hover tiene que ir despues de a:link y a:visited en las reglas de estilo para que sean efectivas. Y ademas,
-    la pseudoclase a:active tiene que ir despues de a:hover.</p>
-    
-    <!-- Los PSeudo Elementos: Un pseudo elemento es una palabra resevada,
-     que se le aplica a un elemento para darle estilo a una parte de dicho 
-     elemento, y se diferencia de la pseudo clase, que esta separado del 
-     elemento por dobles dos puntos (::), en lugar de dos puntos (:) solamente
-     como es el caso de las pseudo clases -->
-
-    <!-- A modo de ejemplo: Vamos a aplicar un estilo CSS a las primeras lineas de los parrafos que se muestran a continuacion -->
-
-    <p id="p3" class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, repudiandae minus esse ipsam voluptatem fuga deleniti repellat, ducimus molestias unde molestiae, modi doloremque! Omnis quibusdam quae, magnam ipsum explicabo deserunt!</p>
-    <p id="p4" class="info">Fugit reprehenderit ratione rem at culpa deleniti in, laborum reiciendis ullam tenetur id facere nihil quaerat nesciunt, quos, eaque explicabo dignissimos. Magni quae sunt voluptas autem, soluta fugiat nisi consectetur!</p>
-    <p id="p5" class="info">Rem adipisci ullam reprehenderit velit enim natus labore neque repellat laudantium provident, dolores illo quasi harum odio saepe tenetur a totam, alias temporibus iusto voluptatum! Rerum molestias nesciunt ipsum porro.</p>
 
 
 </body>
