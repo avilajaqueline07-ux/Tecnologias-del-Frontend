@@ -45,12 +45,55 @@
             accent-color: red;
         }
     
+        /* Seleccionar varios elementos a la vez, por ejemplo, los h1 y los 
+        parrafos */
+        h1, p {
+            color: brown;
+        }
+
+        /* Seleccionar los parrafos que estan dentro de un elemento div */
+        div > p {
+            border: 3px solid black;
+        }
+
+        /* Seleccionar los parrafos que estan cerca de un elemento ul */
+
+        ul + p {
+            font-weight: bolder;
+        }
+
+        /* Seleccionar elementos table que sean hermanos (siblings) de elementos ul */
+        ul ~ table {
+            border: 4px dashed red;
+        }
+
+        /* Selector que selecciona todos los elementos, el astericos(*) */
+       
+        /* Seleccionar los parrafos de la clase info1 y ocultarlos */
+        p.info1 {
+           /* La regla siguiente, oculta el elemento y no conserva el 
+           espacio que ocupa */ 
+           /* display: none; */ 
+
+           /* En ocasiones necesitamos ocultar el elemento pero conservar el 
+           espacio que ocupa */
+           visibility: hidden; 
+
+        }
+
+        /* Selecciona los parrafos que sean primer hijo de algun elemento */
+        p:first-child {
+            border: 5px solid blueviolet;
+        }
+
     </style>
 </head>
 <body>
+
+    <h1>Selectores</h1>
  
-    <p id="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit assumenda placeat voluptas possimus aliquid? Omnis ad eligendi doloribus nemo culpa, atque eius possimus libero id voluptates! Ex repellendus iure porro?</p>
-    <p id="p2">Maxime officia possimus eligendi accusamus a sapiente, soluta minus repellat nobis, doloribus eum, laborum veritatis. Exercitationem accusamus voluptatem aperiam reprehenderit, aliquam similique ratione dolore, explicabo magnam possimus voluptatum blanditiis voluptates?</p>
+    <p id="p1" class="info1">Soy de la clase Info1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit assumenda placeat voluptas possimus aliquid? Omnis ad eligendi doloribus nemo culpa, atque eius possimus libero id voluptates! Ex repellendus iure porro?</p>
+    <p id="p2" class="info1">Soy de la clase Info1 Maxime officia possimus eligendi accusamus a sapiente, soluta minus repellat nobis, doloribus eum, laborum veritatis. Exercitationem accusamus voluptatem aperiam reprehenderit, aliquam similique ratione dolore, explicabo magnam possimus voluptatum blanditiis voluptates?</p>
     <p id="parrafo-3">Inventore excepturi quae odio facilis corporis labore, voluptatem quaerat eos quis obcaecati non. Soluta fugiat eaque obcaecati nihil voluptas similique, aperiam nulla? Ducimus doloribus eveniet laborum magni eos aliquid officia.</p>
 
     <form action="#">
@@ -63,7 +106,60 @@
         <input type="radio" name="genero" id="mujer">
     </form>
 
+    <div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores facilis qui iste id sed inventore ratione totam aliquam veniam harum officiis tenetur unde dolorem, soluta animi deserunt eaque a non.</p>
+        <p>Voluptatibus impedit magnam rem! Dolorum voluptatem vel eius neque nostrum in accusamus dolore a at? Nesciunt hic impedit provident in doloribus debitis sit, molestiae sint ad! Qui, exercitationem. Sunt, illum.</p>
+        <p>Qui, vitae ut. Eligendi ullam blanditiis est, voluptas, corporis voluptatibus et vitae odit accusamus expedita doloremque debitis, labore provident autem? Beatae, nam necessitatibus. Distinctio, vero! Debitis obcaecati beatae porro nesciunt!</p>
 
+    </div>
 
+    <!-- ul>li{List Item Uno}+li{List Item Dos}+li{List Item Tres} -->
+     <ul>
+        <li>List Item Uno</li>
+        <li>List Item Dos</li>
+        <li>List Item Tres</li>
+     </ul>
+
+     <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Youssef</td>
+                <td>Belhaj</td>
+            </tr>
+            <tr>
+                <td>Miguel Angel</td>
+                <td>Manaira Casimiro</td>
+            </tr>
+        </tbody>
+     </table>
+
+     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga quibusdam doloribus cum commodi ratione veritatis voluptates natus eligendi, eveniet dignissimos architecto? Quidem veritatis doloremque ex maiores, mollitia asperiores error. Laudantium!</p>
+     <p>Blanditiis quia ea perferendis rem possimus voluptatibus sint maiores exercitationem nihil quae iure illum cumque, aliquid perspiciatis facere est mollitia enim repellat unde vero corporis fuga sequi debitis expedita! Nulla.</p>
+
+     <!-- ol>li{Elemento $}*3 -->
+      <ol>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+      </ol>
+
+      <h2>Para seleccionar el primer parrafo hijo de cada elemento div </h2>
+      <!-- div>p*3>lorem -->
+      <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat eum perferendis voluptates voluptate quis saepe molestias, repellat iste provident obcaecati blanditiis id ut sapiente beatae neque, optio, autem ab recusandae.</p>
+        <p>Doloribus iste, esse illum perspiciatis maxime illo sequi autem repellat eligendi dolor, temporibus vero error. Assumenda aliquid odio libero tempora pariatur ut, fugiat sit veritatis? Dicta iste delectus sapiente esse.</p>
+        <p>Magni ipsa doloribus praesentium labore dolores voluptatum ratione cum veniam, ipsam quo reprehenderit suscipit iste voluptates hic amet voluptate fuga, vitae, molestiae id accusantium minima. Accusantium cupiditate dicta officia ducimus?</p>
+      </div>
+      <div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi cum totam iusto aliquid provident qui placeat. Quae culpa veritatis non nisi quas sapiente recusandae dolor porro laboriosam id? Dignissimos, ipsum!</p>
+        <p>Atque culpa vero eaque eligendi perferendis dicta quia ab debitis cupiditate velit, minus quidem odio porro corrupti expedita, doloremque ex? Corrupti consectetur fugiat, earum minima possimus voluptatibus natus totam deserunt.</p>
+        <p>Eaque earum repudiandae enim blanditiis cum, maxime a amet in voluptates culpa porro vel deserunt iusto. Cumque, sint molestiae recusandae nisi velit aut, consequatur fuga facilis eum, ut blanditiis eius!</p>
+      </div> 
 </body>
 </html>
