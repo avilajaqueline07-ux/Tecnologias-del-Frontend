@@ -4,40 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intro al HTML</title>
+    <title>Positioning Example</title>
     <style>
-      body {
-        width: 90%;
-        max-width: 900px;
+     body {
+        width: 500px;
         margin: 0 auto;
-        font: 0.9em/1.2 "Helvetica", "Arial", sans-serif;
-      }  
-      
-     img{
-        width: 100px;;
-        height: 150px;
+     } 
+     p {
         background-color: aqua;
-        float:right;
-        margin: left 15px;
-        border-radius: 2px;
-            
-        }
+        border: 3px solid blue;
+        padding: 10px;
+        margin: 10px;
+     }
+      span{
+        background-color: red;
+        border: 1px solid black;
+      }
       
     </style>
 </head>
 
 <body>
-    <h1 >Uso actual de la propiedad float</h1>
-    <div class="box"> Caja Flotante</div>
-    <img src="imagenes\perrito.webp" alt="perito saltando">
+    <!-- Positioning (Posicionamiento): Te permite sacar a los elementos HTML 
+del flujo normal de renderizado (construccion) y hacerlos que se comporten de forma diferente, por ejemplo, situar un elemento sobre otro o que siempre permanezca en el mismo sitio dentro del viewport (area del navegador donde se renderiza el documento web)
 
+A continuacion veremos, con ejemplos, los diferentes valores que puede tomar la propiedad position y como usarlos
+
+Valores de position:
+
+1- static: Valor por defecto de posicionar los elementos dentro de la pagina web
+2- relative: Los elementos HTML posicionados utilizando este valor permanecen en el flujo normal, excepto si se aplica el posicionamiento absoluto (fixed/sticky) que saca a los elementos fuera del flujo normal y los situa en capas separadas
+3- Utilizando las propiedades top, bottom, left y right, que daran un valor difente en el posicionamiento 
+4- Establecer el contexto de posicionamiento de un elemento posicionado, tomando en consideracion la posicion de un ancestro (padre, etc.)-->
     
-    <p>ipsum dolor sit amet consectetur adipisicing elit. Error modi, nulla dolore, voluptatum consequatur ea inventore magni aliquid voluptatibus commodi architecto voluptates autem doloremque ex dolor sunt pariatur quisquam ut?</p>
+<h1>Flujo basico del documento</h1>
 
-    <p>Aperiam quam ea modi facere quidem hic harum libero distinctio saepe, provident velit ipsum sint voluptatem consequatur magni voluptate exercitationem sequi ipsa, excepturi iure officia minus maiores. Eius, excepturi molestias!</p>
-    <p>Consequuntur, delectus. Ea aperiam ex harum perspiciatis unde praesentium officiis quo dolorem enim, eligendi delectus laudantium temporibus beatae nesciunt ad cum sapiente ratione iusto quas quae excepturi voluptatem sed! Inventore?</p>
-    <p>Enim nulla ex fugit inventore, fuga consequatur tenetur quas sequi maiores ipsum voluptatum voluptate iusto magnam necessitatibus non doloremque illo ut quam voluptatem animi nihil aliquid, impedit sed corporis. Aut.</p>
-    <p>Ea omnis soluta repudiandae aperiam voluptates impedit sequi obcaecati similique harum ullam facere incidunt molestiae necessitatibus nisi, commodi ipsa culpa fuga vel corporis ut non quaerat, deleniti autem quisquam! Saepe!</p>
+<p>Soy un elemento a nivel de bloque basico. Mis elementos de bloque adyacentes se ubican en nuevas lineas por debajo de la mia</p>
+<p>Por defecto hacemos un span del 100% del ancho del elemento padre, y nuestra altura es tan alta como el contenido de nuestros elementos hijos, Nuestro ancho total y altura es nuesto contenido + padding + border por el ancho y por el
+ alto
+</p>
+<p>
+Estamos separados por nuestros margenes. Debido a los margenes colapsados, estamos separados por el ancho de uno de nuestros margenes y no por ambos
+</p>
+
+     <p>
+        Los elementos inline <span>como este</span> y <span>este otro</span> se ubican en la misma linea si hay espacio en la misma linea. El sobrante de los elementos inline <span>se atrapa en una nueva linea si es posible - como esta conteniendo texto</span>, o solamente va en una nueva linea de lo contrario, como seria con la imagen siguiente: 
+        <img src="https://mdn.github.io/shared-assets/images/examples/long.jpg" alt="Imagen libre">
+        
+     </p>
+    
     
     
 </body>
