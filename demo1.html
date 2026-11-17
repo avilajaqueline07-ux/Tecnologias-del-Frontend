@@ -17,10 +17,11 @@
         }
         
         
-        /* Que la primera columna ocupe 2 fracciones del espacio disponible */
+        /* Dar un tamaño a las filas para que no sea implicito, de 100px en este caso*/
          .container {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(100px, auto);
             gap: 20px;
          }
 
@@ -30,10 +31,14 @@
 <body>
 
     <div class="container">
-        <div>One</div>
+        <div>One
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta velit necessitatibus ipsa et! Praesentium officia consequatur esse suscipit libero ut deserunt, adipisci vero hic facere magnam eum vel mollitia quidem!</p>
+        </div>
         <div>Two</div>
         <div>Three</div>
-        <div>Four</div>
+        <div>Four
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique odio itaque molestias cupiditate optio pariatur modi explicabo cum? Libero cum ipsam pariatur nisi. Quibusdam sapiente dicta maiores dolores! Suscipit, aperiam.</p>
+        </div>
         <div>Five</div>
         <div>Six</div>
         <div>Seven</div>
